@@ -5,6 +5,7 @@ import { NavBar } from "./components/nav/NavBar"
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
 import { userStorageKey } from "./components/auth/authSettings"
+import { LandingPage } from "./views/LandingPage"
 import "./Home.css"
 
 export const Home = () => (
@@ -14,7 +15,7 @@ export const Home = () => (
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-              <NavBar />
+              {/* <NavBar /> */}
               <ApplicationViews />
             </>
           )
