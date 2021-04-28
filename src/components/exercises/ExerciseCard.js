@@ -23,10 +23,10 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise }) => {
                 <button type="button" onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
 
 
-                {/* <button type="button"
+                <button type="button"
                     onClick={() => history.push(`/exercise/${exercise.id}/edit`)}>
                     Edit
-                </button> */}
+                </button>
 
             </div>
         </div>
