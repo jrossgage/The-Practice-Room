@@ -9,7 +9,6 @@ import { getAllExercises, getExercisesByCatId, deleteExercise } from "../modules
 export const ExerciseList = ({ catId }) => {
     const [exercises, setExercises] = useState([])
     const history = useHistory() 
-
     const userId = sessionStorage.getItem("app_user_id")
 
     const getCatExercises = (cat, user) => {
@@ -18,10 +17,10 @@ export const ExerciseList = ({ catId }) => {
         })
     }
 
-    // const handleDeleteExercise = (id) => {
-    //     deleteExercise(id)
-    //     .then(() => getFilteredExercises(catId));
-    // };
+    const handleDeleteExercise = (id) => {
+        deleteExercise(id)
+        .then(() => getCatExercises(catId, userId));
+    };
 
     useEffect(() => {
         getCatExercises(catId, userId);
@@ -34,7 +33,7 @@ export const ExerciseList = ({ catId }) => {
                     <ExerciseCard
                         key={exercise.id}
                         exercise={exercise}
-                        /*handleDeleteExercise={handleDeleteExercise}*/ />)}
+                        handleDeleteExercise={handleDeleteExercise} />)}
             </div>
         </>
     )
