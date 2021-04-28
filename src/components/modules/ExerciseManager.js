@@ -10,11 +10,6 @@ export const addExercise = (newExercise) => {
     }).then(response => response.json())
 }
 
-export const getAllExercises = () => {
-    return fetch(`${remoteURL}/exercises`)
-    .then(result => result.json())
-}
-
 export const getExercisesByCatId = (catId, userId) => {
     return fetch(`${remoteURL}/exercises?categoryId=${catId}&userId=${userId}`)
     .then(response => response.json())

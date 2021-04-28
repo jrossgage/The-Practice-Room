@@ -4,6 +4,7 @@ import { Link, useHistory } from "react-router-dom";
 export const ExerciseCard = ({ exercise, handleDeleteExercise }) => {
 
     const history = useHistory()
+
     return (
         <div className="card">
             <div className="card-content">
@@ -13,13 +14,13 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise }) => {
                 </span></h3>
                 <p>Date: </p>
 
-                {/* <button>Add to Session</button> */}
+                <button>Add to Session</button>
                 
                 {/* <Link to={`/exercise/${exercise.id}`}>
                     <button>View</button>
                 </Link> */}
 
-                {/* <button type="button" onClick={() => handleDeleteExercise(exercise.id)}>Delete</button> */}
+                <button type="button" onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
 
 
                 {/* <button type="button"
@@ -30,4 +31,5 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise }) => {
             </div>
         </div>
     );
+            
 }

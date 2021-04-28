@@ -48,13 +48,6 @@
       "id": 6
     },
     {
-      "userId": 1,
-      "name": "R test 4",
-      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
-      "categoryId": 3,
-      "id": 7
-    },
-    {
       "userId": 2,
       "name": "M Bryan's test",
       "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
@@ -78,18 +71,6 @@
     }
   ],
   "notes": [
-    {
-      "id": 1,
-      "completion_date": "4/18/21",
-      "note": "Struggle but became comfortable at higher speeds",
-      "exerciseId": 1
-    },
-    {
-      "id": 2,
-      "completion_date": "4/22/21",
-      "note": "Here is some more generatic data",
-      "exerciseId": 1
-    },
     {
       "id": 3,
       "completion_date": "4/22/21",
