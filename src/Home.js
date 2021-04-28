@@ -14,7 +14,7 @@ export const Home = () => (
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-              {/* <NavBar /> */}
+              <NavBar />
               <ApplicationViews />
               <footer className="footer">&copy; The Practice Room 2021</footer>
             </>

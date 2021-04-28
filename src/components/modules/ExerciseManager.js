@@ -15,8 +15,8 @@ export const getAllExercises = () => {
     .then(result => result.json())
 }
 
-export const getExercisesByCatId = (id) => {
-    return fetch(`${remoteURL}/categories/${id}?_embed=exercises`)
+export const getExercisesByCatId = (catId, userId) => {
+    return fetch(`${remoteURL}/exercises?categoryId=${catId}&userId=${userId}`)
     .then(response => response.json())
 }
 
