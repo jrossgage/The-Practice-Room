@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router";
 
 //components and functions
@@ -6,33 +6,35 @@ import { ExerciseCard } from "./ExerciseCard";
 import { getAllExercises, getExercisesByCatId, deleteExercise } from "../modules/ExerciseManager";
 
 
-export const ExerciseList = () => {
+export const ExerciseList = ({ catId }) => {
     const [exercises, setExercises] = useState([])
     const history = useHistory() 
 
-    const  getFilteredExercises = (catId) => {
-        return getExercisesByCatId(catId).then(exercises => {
-            setExercises(exercises)
-        });
-    };
+    const userId = sessionStorage.getItem("app_user_id")
 
-    const handleDeleteExercise = (id) => {
-        deleteExercise(id)
-        .then(() => getFilteredExercises(catId));
-    };
+    const getCatExercises = (cat, user) => {
+        return getExercisesByCatId(cat, user).then(catExercises => {
+            setExercises(catExercises)
+        })
+    }
+
+    // const handleDeleteExercise = (id) => {
+    //     deleteExercise(id)
+    //     .then(() => getFilteredExercises(catId));
+    // };
 
     useEffect(() => {
-        getFilteredExercises(catId);
+        getCatExercises(catId, userId);
     }, []);
 
     return (
         <>
-        <h1>ExerciseList Mounted!</h1>
-        <div className="container-cards">
-                {exercises.map(exercise => <ExerciseCard
-                    key={exercise.id}
-                    exercise={exercise}
-                    handleDeleteExercise={handleDeleteExercise} />)}
+            <div className="container-cards">
+                {exercises.map(exercise =>
+                    <ExerciseCard
+                        key={exercise.id}
+                        exercise={exercise}
+                        /*handleDeleteExercise={handleDeleteExercise}*/ />)}
             </div>
         </>
     )

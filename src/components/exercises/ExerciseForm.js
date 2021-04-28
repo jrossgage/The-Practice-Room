@@ -3,7 +3,6 @@ import { useHistory } from "react-router-dom";
 import { addExercise } from "../modules/ExerciseManager";
 import { getAllCategories } from "../modules/CategoryManager";
 
-
 export const ExerciseForm = () => {
 
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
@@ -64,7 +63,7 @@ export const ExerciseForm = () => {
                 <h2 className="exerciseForm__title">What do you want to work on?</h2>
                 <button className="goBack-bttn"
                     onClick={handleClickGoBack}>
-                    Go Back
+                  Landing Page
               </button>
             </div>
             <form className="exerciseForm">

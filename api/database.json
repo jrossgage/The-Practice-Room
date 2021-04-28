@@ -4,22 +4,62 @@
       "email": "j@j.com",
       "name": "Joel Gage",
       "id": 1
+    },
+    {
+      "email": "b@b.com",
+      "name": "Bryan Nilsen",
+      "id": 2
     }
   ],
   "exercises": [
     {
       "userId": 1,
-      "name": "Single String Scale",
+      "name": "M Single String Scale",
       "description": "Play the desired scale up and down the neck on a single string using different finger groupings. Say the notes aloud as you play them.",
       "categoryId": 1,
       "id": 2
     },
     {
       "userId": 1,
-      "name": "Contrary Motion",
+      "name": "M Contrary Motion",
       "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
       "categoryId": 1,
       "id": 3
+    },
+    {
+      "userId": 1,
+      "name": "H test 1",
+      "description": "Play the desired scale up and down the neck on a single string using different finger groupings. Say the notes aloud as you play them.",
+      "categoryId": 2,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "name": "H test 2",
+      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
+      "categoryId": 2,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "R test 3",
+      "description": "Play the desired scale up and down the neck on a single string using different finger groupings. Say the notes aloud as you play them.",
+      "categoryId": 3,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "name": "R test 4",
+      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
+      "categoryId": 3,
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "name": "M Bryan's test",
+      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
+      "categoryId": 1,
+      "id": 8
     }
   ],
   "sessions": [],
@@ -38,11 +78,53 @@
     }
   ],
   "notes": [
-    { 
-    "id": 1,
-    "completion_date": "4/18/21",
-    "note": "Struggle but became comfortable at higher speeds",
-    "exerciseId": 2
+    {
+      "id": 1,
+      "completion_date": "4/18/21",
+      "note": "Struggle but became comfortable at higher speeds",
+      "exerciseId": 1
+    },
+    {
+      "id": 2,
+      "completion_date": "4/22/21",
+      "note": "Here is some more generatic data",
+      "exerciseId": 1
+    },
+    {
+      "id": 3,
+      "completion_date": "4/22/21",
+      "note": "Stuffs",
+      "exerciseId": 2
+    },
+    {
+      "id": 4,
+      "completion_date": "4/23/21",
+      "note": "Things",
+      "exerciseId": 2
+    },
+    {
+      "id": 5,
+      "completion_date": "4/22/21",
+      "note": "All kinds of notes",
+      "exerciseId": 3
+    },
+    {
+      "id": 6,
+      "completion_date": "4/16/21",
+      "note": "NoteNoteNote",
+      "exerciseId": 4
+    },
+    {
+      "id": 7,
+      "completion_date": "4/17/21",
+      "note": "Hi hello there",
+      "exerciseId": 5
+    },
+    {
+      "id": 8,
+      "completion_date": "4/17/21",
+      "note": "Still more",
+      "exerciseId": 6
     }
   ]
 }
