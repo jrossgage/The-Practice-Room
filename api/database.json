@@ -13,6 +13,13 @@
       "description": "Play the desired scale up and down the neck on a single string using different finger groupings. Say the notes aloud as you play them.",
       "categoryId": 1,
       "id": 2
+    },
+    {
+      "userId": 1,
+      "name": "Contrary Motion",
+      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
+      "categoryId": 1,
+      "id": 3
     }
   ],
   "sessions": [],
@@ -28,6 +35,14 @@
     {
       "id": 3,
       "name": "Rhythm"
+    }
+  ],
+  "notes": [
+    { 
+    "id": 1,
+    "completion_date": "4/18/21",
+    "note": "Struggle but became comfortable at higher speeds",
+    "exerciseId": 2
     }
   ]
 }

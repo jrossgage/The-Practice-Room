@@ -9,3 +9,19 @@ export const addExercise = (newExercise) => {
         body: JSON.stringify(newExercise)
     }).then(response => response.json())
 }
+
+export const getAllExercises = () => {
+    return fetch(`${remoteURL}/exercises`)
+    .then(result => result.json())
+}
+
+export const getExercisesByCatId = (id) => {
+    return fetch(`${remoteURL}/categories/${id}?_embed=exercises`)
+    .then(response => response.json())
+}
+
+export const deleteExercise = (id) => {
+    return fetch(`${remoteURL}/exercises/${id}`, {
+        method: "DELETE"
+    }).then(result => result.json())
+    }
