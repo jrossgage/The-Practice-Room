@@ -6,7 +6,7 @@ import { ExerciseCard } from "./ExerciseCard";
 import { getAllExercises, getExercisesByCatId, deleteExercise } from "../modules/ExerciseManager";
 
 
-export const ExerciseList = ({ catId }) => {
+export const ExerciseList = ({ catId, handleAddToSession }) => {
     const [exercises, setExercises] = useState([])
     const history = useHistory() 
     const userId = sessionStorage.getItem("app_user_id")
@@ -33,7 +33,8 @@ export const ExerciseList = ({ catId }) => {
                     <ExerciseCard
                         key={exercise.id}
                         exercise={exercise}
-                        handleDeleteExercise={handleDeleteExercise} />)}
+                        handleDeleteExercise={handleDeleteExercise}
+                        handleAddToSession={handleAddToSession} />)}
             </div>
         </>
     )
