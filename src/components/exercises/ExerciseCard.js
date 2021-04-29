@@ -39,10 +39,11 @@ export const SessionExerciseCard = ({ exercise }) => {
 
     return (
         <div className="card">
+            <h1>HERE IS THE EXERCISE</h1>
             <div className="card-content">
-                <h3>Name:
-                    <span className="card-exerciseName">
-                    {exercise.name}
+                <h3>Name: 
+                     <span className="card-exerciseName">
+                     {exercise.name}
                 </span></h3>
                 {/* <p>Date: </p>
 
