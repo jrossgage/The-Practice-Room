@@ -19,6 +19,13 @@ export const PracticeRoom = () => {
             })
     }
 
+    const clearSessionContainer = () => {
+       
+            const clearExercises = []
+            setExercises(clearExercises)
+        }
+    
+
     return (
         <>
             <div className="headTitle">
@@ -51,7 +58,8 @@ export const PracticeRoom = () => {
             </section>
 
             <SessionContainer
-                exercises={exercises} />
+                exercises={exercises}
+                clearSessionContainer={clearSessionContainer} />
         </>
     )
 }

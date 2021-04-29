@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useHistory } from "react-router"
 import "./SessionContainer.css"
 
@@ -7,7 +7,7 @@ import { SessionExerciseCard } from "../exercises/ExerciseCard"
 import { addSession, addSessionExercise } from "../modules/SessionManager"
 
 
-export const SessionContainer = ({ exercises }) => {
+export const SessionContainer = ({ exercises, clearSessionContainer }) => {
 
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
 
@@ -16,6 +16,7 @@ export const SessionContainer = ({ exercises }) => {
         name: "",
     })
 
+    const [emptyContainer, setEmptyContainer] = useState(true)
     const [isLoading, setIsLoading] = useState(false);
     const history = useHistory()
 
@@ -39,7 +40,8 @@ export const SessionContainer = ({ exercises }) => {
         if (name === "Current Practice Session" || name === "") {
             window.alert("Input a Session Name")
             setIsLoading(false)
-        } else {
+        } 
+        if (event.target.id === "begin") {
             addSession(session)
                 .then(resSession => {
                     const sessId = resSession.id
@@ -52,12 +54,48 @@ export const SessionContainer = ({ exercises }) => {
                             exerciseId: id
                         }
                         addSessionExercise(sessionExercise)
-                        .then(() => history.push("/room"))
+                        .then(() => history.push("/practice"))
+                    }
+                })
+            }
+            if (event.target.id === "saveLater") {
+                addSession(session)
+                .then(resSession => {
+                    const sessId = resSession.id
+                    let exerciseIdArray = []
+                    exercises.map(exercise => exerciseIdArray.push(exercise.id))
+
+                    for(const id of exerciseIdArray) {
+                        let sessionExercise = {
+                            sessionId: sessId,
+                            exerciseId: id
+                        }
+                        addSessionExercise(sessionExercise)
+                        .then(() => {
+                            const session = {
+                                userId: currentUser,
+                                name: ""
+                            }
+                            setSession(session);
+                            clearSessionContainer();
+                            setIsLoading(false);
+                            setEmptyContainer(true)
+                        })
                     }
                 })
             }
         }
 
+        const checkContainer = () => {
+            if(exercises.length > 1) {
+                setEmptyContainer(false)
+            }
+        }
+        
+        useEffect(() => {
+            checkContainer();
+        }, [exercises])
+        
             return (
                 <>
                     <div className="sessionContainerTitle">
@@ -72,12 +110,14 @@ export const SessionContainer = ({ exercises }) => {
                             />)}
                     </div>
 
-                    <button>Begin Practicing!</button>
+                    <button disabled={emptyContainer} className="beginPractice=bttn" id="begin" 
+                    onClick={handleClickSessionSave}>Begin Practicing!</button>
 
-                    <button disabled={isLoading} className="saveSession-bttn"
+                    <button disabled={emptyContainer} className="saveSession-bttn" id="saveLater"
                         onClick={handleClickSessionSave}>Save For Later</button>
 
-                    <button>Clear</button>
+                    <button className="clearSession-bttn" id="clear" 
+                    onClick={() => clearSessionContainer()}>Clear Session</button>
 
                 </>
             )
