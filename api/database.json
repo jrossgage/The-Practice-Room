@@ -65,21 +65,27 @@
   "sessions": [
     {
       "userId": 1,
-      "name": "First Practice Session!",
+      "name": "Morning Practice Routine ",
+      "id": 1
+    }
+  ],
+  "session_exercises": [
+    {
+      "sessionId": 1,
+      "exerciseId": 6,
       "id": 1
     },
     {
-      "userId": 1,
-      "name": "Another Practice Session!",
+      "sessionId": 1,
+      "exerciseId": 9,
       "id": 2
     },
     {
-      "userId": 1,
-      "name": "the third session",
+      "sessionId": 1,
+      "exerciseId": 2,
       "id": 3
     }
   ],
-  "session_exercises": [],
   "categories": [
     {
       "id": 1,

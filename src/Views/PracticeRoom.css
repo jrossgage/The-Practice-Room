@@ -2,3 +2,15 @@
     display: flex;
     justify-content: space-around;
 }
+
+.melody_col{
+    display: block;
+}
+
+.harmony_col{
+    display: block;
+}
+
+.rhythm_col{
+    display: block;
+}
