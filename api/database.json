@@ -53,9 +53,33 @@
       "name": "M Bryan's test edit",
       "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
       "categoryId": 2
+    },
+    {
+      "userId": 1,
+      "name": "Howdy",
+      "description": "HTHTHSahdafjjlksd",
+      "categoryId": 2,
+      "id": 9
     }
   ],
-  "sessions": [],
+  "sessions": [
+    {
+      "userId": 1,
+      "name": "First Practice Session!",
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "name": "Another Practice Session!",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "name": "the third session",
+      "id": 3
+    }
+  ],
+  "session_exercises": [],
   "categories": [
     {
       "id": 1,
