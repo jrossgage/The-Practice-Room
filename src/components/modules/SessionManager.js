@@ -1,5 +1,10 @@
 const remoteURL = "http://localhost:8088"
 
+export const getAllSessions = (userId) => {
+    return fetch(`${remoteURL}/sessions?userId=${userId}`)
+    .then(response => response.json())
+}
+
 export const addSession = (newSession) => {
     return fetch(`${remoteURL}/sessions`, {
         method: "POST",
