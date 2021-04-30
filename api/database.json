@@ -94,6 +94,11 @@
       "userId": 2,
       "name": "Bryan's Session",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "name": "",
+      "id": 18
     }
   ],
   "session_exercises": [
@@ -146,6 +151,21 @@
       "sessionId": 17,
       "exerciseId": 11,
       "id": 39
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 4,
+      "id": 40
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 3,
+      "id": 41
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 6,
+      "id": 42
     }
   ],
   "categories": [
@@ -163,29 +183,6 @@
     }
   ],
   "notes": [
-    {
-      "id": 5,
-      "completion_date": "4/22/21",
-      "note": "All kinds of notes",
-      "exerciseId": 3
-    },
-    {
-      "id": 6,
-      "completion_date": "4/16/21",
-      "note": "NoteNoteNote",
-      "exerciseId": 4
-    },
-    {
-      "id": 7,
-      "completion_date": "4/17/21",
-      "note": "Hi hello there",
-      "exerciseId": 5
-    },
-    {
-      "id": 8,
-      "completion_date": "4/17/21",
-      "note": "Still more",
-      "exerciseId": 6
-    }
+
   ]
 }
