@@ -1,5 +1,10 @@
 const remoteURL = "http://localhost:8088"
 
+export const getAllSessions = (userId) => {
+    return fetch(`${remoteURL}/sessions?userId=${userId}`)
+    .then(response => response.json())
+}
+
 export const addSession = (newSession) => {
     return fetch(`${remoteURL}/sessions`, {
         method: "POST",
@@ -18,4 +23,15 @@ export const addSessionExercise = (newSessionExercise) => {
         },
         body: JSON.stringify(newSessionExercise)
     }).then(response => response.json())
+}
+
+export const getExercisesBySessionId = (sessionId) => {
+    return fetch(`${remoteURL}/session_exercises?_expand=exercise&sessionId=${sessionId}`)
+    .then(response => response.json())
+}
+
+export const deleteSession = (sessionId) => {
+    return fetch(`${remoteURL}/sessions/${sessionId}`, {
+        method: "DELETE"
+    }).then(result => result.json())
 }

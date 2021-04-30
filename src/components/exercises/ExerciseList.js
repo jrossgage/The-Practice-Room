@@ -28,7 +28,7 @@ export const ExerciseList = ({ catId, handleAddToSession }) => {
 
     return (
         <>
-            <div className="container-cards">
+            <div>
                 {exercises.map(exercise =>
                     <ExerciseCard
                         key={exercise.id}
