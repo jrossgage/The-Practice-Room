@@ -1,5 +1,5 @@
-import React from "react"
-import { Route, Router } from "react-router-dom"
+import React, {useState} from "react"
+import { Route, Router, useHistory } from "react-router-dom"
 
 //Components 
 import { LandingPage } from "./views/LandingPage";
@@ -10,6 +10,16 @@ import { Session } from "./views/Session";
 import { PracticeView } from "./views/PracticeView";
 
 export const ApplicationViews = () => {
+
+  const [sessionId, setSessionId]= useState();
+  const history = useHistory()
+  //Traveling down to the SessionCard child
+  //need to pass sessionId as state into PracticeView
+  const handleBeginButton = (sessionId) => {
+    setSessionId(sessionId)
+    history.push("/practice")
+}
+
   return (
     <>
 
@@ -30,11 +40,13 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route path="/sessions">
-        <Session />
+        <Session 
+        handleBeginButton={handleBeginButton}/>
       </Route>
 
       <Route path="/practice">
-        <PracticeView />
+        <PracticeView 
+        sessionId={sessionId}/>
       </Route>
 
     </>
