@@ -164,28 +164,46 @@
   ],
   "notes": [
     {
-      "id": 5,
-      "completion_date": "4/22/21",
-      "note": "All kinds of notes",
-      "exerciseId": 3
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Made some real progress today!",
+      "exerciseId": "3",
+      "id": 1
     },
     {
-      "id": 6,
-      "completion_date": "4/16/21",
-      "note": "NoteNoteNote",
-      "exerciseId": 4
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Here's a new note",
+      "exerciseId": "3",
+      "id": 2
     },
     {
-      "id": 7,
-      "completion_date": "4/17/21",
-      "note": "Hi hello there",
-      "exerciseId": 5
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Hi",
+      "exerciseId": "3",
+      "id": 3
     },
     {
-      "id": 8,
-      "completion_date": "4/17/21",
-      "note": "Still more",
-      "exerciseId": 6
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "adfasdf",
+      "exerciseId": "3",
+      "id": 4
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "adfasdf",
+      "exerciseId": "3",
+      "id": 5
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Joel Joel Joel",
+      "exerciseId": "3",
+      "id": 6
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Joel Joel Joel",
+      "exerciseId": "3",
+      "id": 7
     }
   ]
 }
