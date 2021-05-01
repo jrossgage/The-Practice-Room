@@ -94,11 +94,6 @@
       "userId": 2,
       "name": "Bryan's Session",
       "id": 17
-    },
-    {
-      "userId": 1,
-      "name": "",
-      "id": 18
     }
   ],
   "session_exercises": [
@@ -151,21 +146,6 @@
       "sessionId": 17,
       "exerciseId": 11,
       "id": 39
-    },
-    {
-      "sessionId": 18,
-      "exerciseId": 4,
-      "id": 40
-    },
-    {
-      "sessionId": 18,
-      "exerciseId": 3,
-      "id": 41
-    },
-    {
-      "sessionId": 18,
-      "exerciseId": 6,
-      "id": 42
     }
   ],
   "categories": [
@@ -183,6 +163,47 @@
     }
   ],
   "notes": [
-
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Made some real progress today!",
+      "exerciseId": "3",
+      "id": 1
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Here's a new note",
+      "exerciseId": "3",
+      "id": 2
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Hi",
+      "exerciseId": "3",
+      "id": 3
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "adfasdf",
+      "exerciseId": "3",
+      "id": 4
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "adfasdf",
+      "exerciseId": "3",
+      "id": 5
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Joel Joel Joel",
+      "exerciseId": "3",
+      "id": 6
+    },
+    {
+      "completion_date": "Sat May 01 2021",
+      "progressNote": "Joel Joel Joel",
+      "exerciseId": "3",
+      "id": 7
+    }
   ]
 }

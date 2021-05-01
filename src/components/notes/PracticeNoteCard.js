@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router"
 import "./PracticeNoteCard.css"
 
-export const PracticeNoteCard = ({ exercise, handleCheckboxClick, handleControlledInputChange }) => {
+export const PracticeNoteCard = ({ exercise, handleCheckboxClick, handleControlledInputChange, isLoading }) => {
 
     const history = useHistory()
 
