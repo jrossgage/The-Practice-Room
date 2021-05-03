@@ -164,46 +164,100 @@
   ],
   "notes": [
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "Made some real progress today!",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "Here is a new note",
+      "exerciseId": 3,
       "id": 1
     },
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "Here's a new note",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "A newer note",
+      "exerciseId": 3,
       "id": 2
     },
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "Hi",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "Bryan",
+      "exerciseId": 5,
       "id": 3
     },
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "adfasdf",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "With Data as the Object",
+      "exerciseId": 9,
       "id": 4
     },
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "adfasdf",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "test",
+      "exerciseId": 3,
       "id": 5
     },
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "Joel Joel Joel",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "still test",
+      "exerciseId": 5,
       "id": 6
     },
     {
-      "completion_date": "Sat May 01 2021",
-      "progressNote": "Joel Joel Joel",
-      "exerciseId": "3",
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "wow",
+      "exerciseId": 9,
       "id": 7
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "Helo",
+      "exerciseId": 5,
+      "id": 8
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "test",
+      "exerciseId": 3,
+      "id": 9
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "test",
+      "exerciseId": 9,
+      "id": 10
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "wow its note time",
+      "exerciseId": 9,
+      "id": 11
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "Here is another note",
+      "exerciseId": 5,
+      "id": 12
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "Joel made a note today",
+      "exerciseId": 3,
+      "id": 13
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "bang",
+      "exerciseId": 3,
+      "id": 14
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "pow",
+      "exerciseId": 5,
+      "id": 15
+    },
+    {
+      "completion_date": "Mon May 03 2021",
+      "progressNote": "sweet",
+      "exerciseId": 9,
+      "id": 16
     }
   ]
 }
