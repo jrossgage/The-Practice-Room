@@ -165,18 +165,6 @@
   "notes": [
     {
       "completion_date": "Mon May 03 2021",
-      "progressNote": "Here is a new note",
-      "exerciseId": 3,
-      "id": 1
-    },
-    {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "A newer note",
-      "exerciseId": 3,
-      "id": 2
-    },
-    {
-      "completion_date": "Mon May 03 2021",
       "progressNote": "Bryan",
       "exerciseId": 5,
       "id": 3
@@ -186,12 +174,6 @@
       "progressNote": "With Data as the Object",
       "exerciseId": 9,
       "id": 4
-    },
-    {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "test",
-      "exerciseId": 3,
-      "id": 5
     },
     {
       "completion_date": "Mon May 03 2021",
@@ -214,12 +196,6 @@
     {
       "completion_date": "Mon May 03 2021",
       "progressNote": "test",
-      "exerciseId": 3,
-      "id": 9
-    },
-    {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "test",
       "exerciseId": 9,
       "id": 10
     },
@@ -236,16 +212,10 @@
       "id": 12
     },
     {
+      "id": 13,
       "completion_date": "Mon May 03 2021",
-      "progressNote": "Joel made a note today",
-      "exerciseId": 3,
-      "id": 13
-    },
-    {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "bang",
-      "exerciseId": 3,
-      "id": 14
+      "progressNote": "New(est) Edit!",
+      "exerciseId": 3
     },
     {
       "completion_date": "Mon May 03 2021",
