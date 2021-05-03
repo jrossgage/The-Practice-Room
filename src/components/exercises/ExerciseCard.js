@@ -16,9 +16,9 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise, handleAddToSessio
 
                 <button type="button" onClick={() => handleAddToSession(exercise.id)}>Add to Session</button>
                 
-                {/* <Link to={`/exercise/${exercise.id}`}>
+                <Link to={`/exercise/${exercise.id}`}>
                     <button>View</button>
-                </Link> */}
+                </Link>
 
                 <button type="button" onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
 
