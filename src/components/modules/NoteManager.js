@@ -11,7 +11,7 @@ export const addNote = (newNote) => {
 }
 
 export const getNotesByExercise = (id) => {
-    return fetch(`${remoteURL}/notes?exerciseId=3`)
+    return fetch(`${remoteURL}/notes?exerciseId=${id}`)
     .then(response => response.json())
 }
 
