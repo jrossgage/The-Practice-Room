@@ -9,249 +9,170 @@
       "email": "b@b.com",
       "name": "Bryan Nilsen",
       "id": 2
+    },
+    {
+      "email": "bj@bj.com",
+      "name": "B.J. Golden",
+      "id": 3
     }
   ],
   "exercises": [
     {
-      "userId": 1,
-      "name": "M Contrary Motion",
-      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
-      "categoryId": 1,
+      "userId": 3,
+      "id": 1,
+      "name": "Mary Had a Little Lamb",
+      "description": "Shred Marry Had a little lamb, metal style.",
+      "categoryId": 1
+    },
+    {
+      "userId": 3,
+      "id": 2,
+      "name": "Major Triads",
+      "description": "Work through all major triads on each string set. Start on the top strings.",
+      "categoryId": 2
+    },
+    {
+      "userId": 3,
+      "name": "Right hand strumming",
+      "description": "With a metronome, work on a relaxed right hand and an even tone.",
+      "categoryId": 3,
       "id": 3
     },
     {
       "userId": 1,
-      "id": 4,
-      "name": "H test 1 edit again",
-      "description": "Play the desired scale up and down the neck on a single string using different finger groupings. Say the notes aloud as you play them.",
-      "categoryId": 2
+      "name": "Single String Scales",
+      "description": "Within a key and a scale, work the scale up and down the neck on each string using differing finger groupings.",
+      "categoryId": 1,
+      "id": 4
     },
     {
       "userId": 1,
-      "name": "H test 2",
-      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
+      "name": "Diatonic Chords",
+      "description": "Within a scale, work diatonic chord shapes up and down the neck. First with triads then seventh chords.",
       "categoryId": 2,
       "id": 5
     },
     {
       "userId": 1,
-      "name": "R test 3",
-      "description": "Play the desired scale up and down the neck on a single string using different finger groupings. Say the notes aloud as you play them.",
+      "name": "Funk Comping",
+      "description": "Focus on a relaxed wrist and comp a funk rhythm on a static chord. ",
       "categoryId": 3,
       "id": 6
     },
     {
-      "userId": 2,
-      "id": 8,
-      "name": "M Bryan's test edit",
-      "description": "While working within a scale, grab the lowest and the highest possible notes in position. Then  work up and down the scale in contrary motion using double stops.",
-      "categoryId": 2
-    },
-    {
       "userId": 1,
-      "name": "Howdy",
-      "description": "HTHTHSahdafjjlksd",
-      "categoryId": 2,
-      "id": 9
-    },
-    {
-      "userId": 2,
-      "name": "Melody Bryan",
-      "description": "tesetteset",
+      "name": "Jazz Standards",
+      "description": "Play through memorized jazz melodies in all 12 keys.",
       "categoryId": 1,
-      "id": 10
-    },
-    {
-      "userId": 2,
-      "name": "Rhythm Bryan",
-      "description": "testtest",
-      "categoryId": 3,
-      "id": 11
+      "id": 7
     },
     {
       "userId": 1,
-      "name": "Jazz Standard",
-      "description": "Work through a standard, single line, with appropriate tone and articulation. Move through all 12 keys.",
-      "categoryId": 1,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "name": "Comping Through Standards",
-      "description": "Comp through a standard.",
+      "name": "Chord Melody",
+      "description": "Harmonize a melody utilizing the standard chord changes or a reharm.",
       "categoryId": 2,
-      "id": 13
+      "id": 8
     },
     {
       "userId": 1,
       "name": "South Indian Hand Claps",
-      "description": "Clap your hands a lot",
+      "description": "Clap your hands while saying the syllables. ",
       "categoryId": 3,
-      "id": 14
+      "id": 9
     }
   ],
   "sessions": [
     {
+      "userId": 3,
+      "name": "Daily Practice ",
+      "id": 1
+    },
+    {
       "userId": 1,
-      "name": "Begin",
+      "name": "Morning Routine",
       "id": 2
     },
     {
       "userId": 1,
-      "name": "Json crash",
-      "id": 9
+      "name": "Chord Work",
+      "id": 4
     },
     {
       "userId": 1,
-      "name": "Here We are",
-      "id": 15
-    },
-    {
-      "userId": 2,
-      "name": "Bryan's Session",
-      "id": 17
+      "name": "Warm Up",
+      "id": 5
     },
     {
       "userId": 1,
-      "name": "Melodic Work",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "name": "Tuesday morning",
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "name": "test",
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "name": "Test",
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "name": "Another ",
-      "id": 23
+      "name": "Tuesday",
+      "id": 6
     }
   ],
   "session_exercises": [
     {
+      "sessionId": 1,
+      "exerciseId": 1,
+      "id": 1
+    },
+    {
+      "sessionId": 1,
+      "exerciseId": 2,
+      "id": 2
+    },
+    {
+      "sessionId": 1,
+      "exerciseId": 3,
+      "id": 3
+    },
+    {
       "sessionId": 2,
-      "exerciseId": 5,
+      "exerciseId": 4,
       "id": 4
     },
     {
-      "sessionId": 9,
-      "exerciseId": 3,
-      "id": 26
-    },
-    {
-      "sessionId": 9,
-      "exerciseId": 9,
-      "id": 27
-    },
-    {
-      "sessionId": 15,
-      "exerciseId": 3,
-      "id": 33
-    },
-    {
-      "sessionId": 17,
-      "exerciseId": 10,
-      "id": 37
-    },
-    {
-      "sessionId": 17,
+      "sessionId": 2,
       "exerciseId": 8,
-      "id": 38
+      "id": 5
     },
     {
-      "sessionId": 17,
-      "exerciseId": 11,
-      "id": 39
-    },
-    {
-      "sessionId": 18,
-      "exerciseId": 12,
-      "id": 40
-    },
-    {
-      "sessionId": 18,
-      "exerciseId": 4,
-      "id": 41
-    },
-    {
-      "sessionId": 18,
+      "sessionId": 2,
       "exerciseId": 6,
-      "id": 42
+      "id": 6
     },
     {
-      "sessionId": 18,
+      "sessionId": 4,
+      "exerciseId": 8,
+      "id": 12
+    },
+    {
+      "sessionId": 4,
       "exerciseId": 5,
-      "id": 43
+      "id": 13
     },
     {
-      "sessionId": 20,
-      "exerciseId": 14,
-      "id": 47
+      "sessionId": 5,
+      "exerciseId": 7,
+      "id": 14
     },
     {
-      "sessionId": 20,
-      "exerciseId": 3,
-      "id": 48
+      "sessionId": 5,
+      "exerciseId": 6,
+      "id": 15
     },
     {
-      "sessionId": 20,
-      "exerciseId": 13,
-      "id": 49
+      "sessionId": 5,
+      "exerciseId": 8,
+      "id": 16
     },
     {
-      "sessionId": 21,
-      "exerciseId": 3,
-      "id": 50
-    },
-    {
-      "sessionId": 21,
+      "sessionId": 6,
       "exerciseId": 4,
-      "id": 51
+      "id": 17
     },
     {
-      "sessionId": 22,
-      "exerciseId": 12,
-      "id": 52
-    },
-    {
-      "sessionId": 22,
-      "exerciseId": 5,
-      "id": 53
-    },
-    {
-      "sessionId": 22,
-      "exerciseId": 14,
-      "id": 54
-    },
-    {
-      "sessionId": 23,
-      "exerciseId": 12,
-      "id": 55
-    },
-    {
-      "sessionId": 23,
-      "exerciseId": 3,
-      "id": 56
-    },
-    {
-      "sessionId": 23,
-      "exerciseId": 4,
-      "id": 57
-    },
-    {
-      "sessionId": 23,
-      "exerciseId": 5,
-      "id": 58
+      "sessionId": 6,
+      "exerciseId": 9,
+      "id": 18
     }
   ],
   "categories": [
@@ -270,94 +191,94 @@
   ],
   "notes": [
     {
-      "id": 3,
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "Small Time Edit!",
-      "exerciseId": 5
+      "id": 1,
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "400 bpm. Shredded it. There was blood everywhere.",
+      "exerciseId": 1
     },
     {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "wow",
-      "exerciseId": 9,
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "90bpm. Worked on top three strings.",
+      "exerciseId": 2,
+      "id": 2
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Played through All the Things You Are",
+      "exerciseId": 8,
+      "id": 3
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "80bpm",
+      "exerciseId": 5,
+      "id": 4
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Moved Quickly. Was not focused",
+      "exerciseId": 7,
+      "id": 5
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "80bpm",
+      "exerciseId": 5,
+      "id": 6
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "120bpm with drum track",
+      "exerciseId": 6,
       "id": 7
     },
     {
-      "id": 8,
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "Helllo",
-      "exerciseId": 5
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "120bpm. with a drum play a long",
+      "exerciseId": 6,
+      "id": 8
     },
     {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "wow its note time",
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "125. Ab melodic Minor",
+      "exerciseId": 4,
+      "id": 9
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "60bpm. Made it through 6's",
       "exerciseId": 9,
+      "id": 10
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Eb. 130bpm",
+      "exerciseId": 4,
       "id": 11
     },
     {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "Here is another note",
-      "exerciseId": 5,
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Beatrice ",
+      "exerciseId": 8,
       "id": 12
     },
     {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "pow",
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "130bpm. ",
+      "exerciseId": 6,
+      "id": 13
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "79bpm. F Harmonic Minor",
       "exerciseId": 5,
+      "id": 14
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "90bpm. Struggled ",
+      "exerciseId": 9,
       "id": 15
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "It worked",
-      "exerciseId": 3,
-      "id": 17
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "Still working ",
-      "exerciseId": 4,
-      "id": 18
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "Cool",
-      "exerciseId": 6,
-      "id": 19
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "Cool cool ",
-      "exerciseId": 12,
-      "id": 20
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "Still wokrin g",
-      "exerciseId": 4,
-      "id": 21
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "new note",
-      "exerciseId": 6,
-      "id": 22
-    },
-    {
-      "id": 23,
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "90 Bpm struggle",
-      "exerciseId": 14
-    },
-    {
-      "completion_date": "Tue May 05 2021",
-      "progressNote": "Here's yet another note",
-      "exerciseId": 3,
-      "id": 24
-    },
-    {
-      "completion_date": "Tue May 04 2021",
-      "progressNote": "Newest Note today!",
-      "exerciseId": 12,
-      "id": 25
     }
   ]
 }
