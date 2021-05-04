@@ -40,10 +40,10 @@
     },
     {
       "userId": 1,
-      "name": "Single String Scales",
+      "id": 4,
+      "name": "Single String Scales v. 2",
       "description": "Within a key and a scale, work the scale up and down the neck on each string using differing finger groupings.",
-      "categoryId": 1,
-      "id": 4
+      "categoryId": 1
     },
     {
       "userId": 1,
@@ -106,6 +106,21 @@
       "userId": 1,
       "name": "Tuesday",
       "id": 6
+    },
+    {
+      "userId": 1,
+      "name": "This one is for Bryan",
+      "id": 7
+    },
+    {
+      "userId": 1,
+      "name": "Testing",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "name": "Hip ",
+      "id": 9
     }
   ],
   "session_exercises": [
@@ -173,6 +188,41 @@
       "sessionId": 6,
       "exerciseId": 9,
       "id": 18
+    },
+    {
+      "sessionId": 7,
+      "exerciseId": 7,
+      "id": 19
+    },
+    {
+      "sessionId": 7,
+      "exerciseId": 5,
+      "id": 20
+    },
+    {
+      "sessionId": 7,
+      "exerciseId": 6,
+      "id": 21
+    },
+    {
+      "sessionId": 8,
+      "exerciseId": 9,
+      "id": 22
+    },
+    {
+      "sessionId": 8,
+      "exerciseId": 6,
+      "id": 24
+    },
+    {
+      "sessionId": 9,
+      "exerciseId": 4,
+      "id": 25
+    },
+    {
+      "sessionId": 9,
+      "exerciseId": 5,
+      "id": 26
     }
   ],
   "categories": [
@@ -252,12 +302,6 @@
     },
     {
       "completion_date": "Tue May 04 2021",
-      "progressNote": "Eb. 130bpm",
-      "exerciseId": 4,
-      "id": 11
-    },
-    {
-      "completion_date": "Tue May 04 2021",
       "progressNote": "Beatrice ",
       "exerciseId": 8,
       "id": 12
@@ -279,6 +323,18 @@
       "progressNote": "90bpm. Struggled ",
       "exerciseId": 9,
       "id": 15
+    },
+    {
+      "id": 16,
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "D major. 133bpm. ",
+      "exerciseId": 4
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "D major. Struggled. ",
+      "exerciseId": 5,
+      "id": 17
     }
   ]
 }

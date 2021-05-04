@@ -3,12 +3,14 @@ import React, { useEffect, useState } from "react";
 //components 
 import { ExerciseList } from "../components/exercises/ExerciseList";
 import { getExerciseById } from "../components/modules/ExerciseManager";
+import { getAllCategories } from "../components/modules/CategoryManager"
 import { SessionContainer } from "../components/sessions/SessionContainer"
 import "./PracticeRoom.css"
 
 //Returns three columns of exercises organized by category. These are user specific exercises
 export const PracticeRoom = ({ handleBeginButton }) => {
     const [exercises, setExercises] = useState([])
+    const [categories, setCategories] = useState([])
 
     const handleAddToSession = (id) => {
         let exerciseArray = [...exercises];
@@ -25,6 +27,12 @@ export const PracticeRoom = ({ handleBeginButton }) => {
             setExercises(clearExercises)
         }
     
+        useEffect(() => {
+            getAllCategories()
+            .then(response => {
+                setCategories(response)
+            })
+        })
 
     return (
         <>
@@ -33,27 +41,16 @@ export const PracticeRoom = ({ handleBeginButton }) => {
             </div>
 
             <section className="exercise_categories_container">
-
-                <div className="melody_col">
-                    <h2>Melody</h2>
+                {categories.map(category => {
+                   return (
+                    <div key={category.id} className={category.name}>
+                    <h2>{category.name}</h2>
                     <ExerciseList
-                        catId={1}
+                        catId={category.id}
                         handleAddToSession={handleAddToSession} />
                 </div>
-
-                <div className="harmony_col">
-                    <h2>Harmony</h2>
-                    <ExerciseList
-                        catId={2}
-                        handleAddToSession={handleAddToSession} />
-                </div>
-
-                <div className="rhythm_col">
-                    <h2>Rhythm</h2>
-                    <ExerciseList
-                        catId={3}
-                        handleAddToSession={handleAddToSession} />
-                </div>
+                )
+                })}
 
             </section>
 

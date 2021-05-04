@@ -83,13 +83,13 @@ export const ExerciseForm = () => {
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="name">Exercise Name:</label>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="exercise name" value={exercise.name} />
+                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control input is-primary" placeholder="exercise name" value={exercise.name} />
                     </div>
                 </fieldset>
                 <fieldset>
                     <div className="form-group">
                         <label htmlFor="description">Description:</label>
-                        <textarea type="textfield" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="exercise description" value={exercise.description} />
+                        <textarea type="textarea" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control textarea" placeholder="exercise description" value={exercise.description} />
                     </div>
                 </fieldset>
 
