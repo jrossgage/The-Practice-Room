@@ -56,7 +56,7 @@ export const PracticeNoteCard = ({ exercise, index, updateCompletedExercise }) =
     return (
         <div className="card">
             <div className="card-content">
-                <h3>Name:
+                <h3>
                     <span className="card-exerciseName">
                         {exercise.name}
                     </span></h3>

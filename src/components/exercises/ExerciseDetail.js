@@ -52,6 +52,7 @@ export const ExerciseDetail = () => {
                     note={note}
                     handleDeleteNote={handleDeleteNote} />)}
                 </div>
+                <button type="button" onClick={() => history.push(`/room`)}>Return</button>
             </section>
         </>
     )
