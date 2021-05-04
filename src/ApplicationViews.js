@@ -46,7 +46,8 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route path="/room">
-        <PracticeRoom />
+        <PracticeRoom
+        handleBeginButton={handleBeginButton} />
       </Route>
 
       <Route path="/sessions">

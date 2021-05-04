@@ -59,7 +59,7 @@ export const PracticeView = ({ sessionId }) => {
         <>
             <div>
                 <h1>Practice View</h1>
-                <button onClick={handleClickGoBack}>Go Back without Saving</button>
+                <button onClick={handleClickGoBack}>View Sessions Without Saving</button>
             </div>
             <div className="container-cards">
                 {exercises.map((exercise, index) =>
