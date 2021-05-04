@@ -7,7 +7,7 @@ import { SessionExerciseCard } from "../exercises/ExerciseCard"
 import { addSession, addSessionExercise } from "../modules/SessionManager"
 
 
-export const SessionContainer = ({ exercises, clearSessionContainer }) => {
+export const SessionContainer = ({ exercises, clearSessionContainer, handleBeginButton }) => {
 
     const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
 
@@ -17,7 +17,6 @@ export const SessionContainer = ({ exercises, clearSessionContainer }) => {
     })
 
     const [emptyContainer, setEmptyContainer] = useState(true)
-    const [isLoading, setIsLoading] = useState(false);
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
@@ -33,13 +32,12 @@ export const SessionContainer = ({ exercises, clearSessionContainer }) => {
 
     const handleClickSessionSave = (event) => {
         event.preventDefault()
-        setIsLoading(true)
+        // setIsLoading(true)
 
         const name = session.name
 
-        if (name === "Current Practice Session" || name === "") {
-            window.alert("Input a Session Name")
-            setIsLoading(false)
+        if (name === "Name Your Session" || name === "") {
+            return window.alert("Input a Session Name")
         } 
         if (event.target.id === "begin") {
             addSession(session)
@@ -54,7 +52,7 @@ export const SessionContainer = ({ exercises, clearSessionContainer }) => {
                             exerciseId: id
                         }
                         addSessionExercise(sessionExercise)
-                        .then(() => history.push("/practice"))
+                        .then(() => handleBeginButton(sessId))
                     }
                 })
             }
@@ -78,7 +76,6 @@ export const SessionContainer = ({ exercises, clearSessionContainer }) => {
                             }
                             setSession(session);
                             clearSessionContainer();
-                            setIsLoading(false);
                             setEmptyContainer(true)
                         })
                     }
@@ -99,8 +96,8 @@ export const SessionContainer = ({ exercises, clearSessionContainer }) => {
             return (
                 <>
                     <div className="sessionContainerTitle">
-                        <h1>Session Container Mounted</h1>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Current Practice Session" value={session.name} />
+                        <h1>Create a Session</h1>
+                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Name Your Session" value={session.name} />
                     </div>
                     <div className="container-cards">
                         {exercises.map(exercise =>

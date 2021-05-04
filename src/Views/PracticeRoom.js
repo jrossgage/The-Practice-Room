@@ -7,7 +7,7 @@ import { SessionContainer } from "../components/sessions/SessionContainer"
 import "./PracticeRoom.css"
 
 //Returns three columns of exercises organized by category. These are user specific exercises
-export const PracticeRoom = () => {
+export const PracticeRoom = ({ handleBeginButton }) => {
     const [exercises, setExercises] = useState([])
 
     const handleAddToSession = (id) => {
@@ -59,7 +59,8 @@ export const PracticeRoom = () => {
 
             <SessionContainer
                 exercises={exercises}
-                clearSessionContainer={clearSessionContainer} />
+                clearSessionContainer={clearSessionContainer}
+                handleBeginButton={handleBeginButton} />
         </>
     )
 }

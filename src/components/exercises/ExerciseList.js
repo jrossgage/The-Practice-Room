@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router";
 
 //components and functions
 import { ExerciseCard } from "./ExerciseCard";
-import { getAllExercises, getExercisesByCatId, deleteExercise } from "../modules/ExerciseManager";
+import { getExercisesByCatId, deleteExercise } from "../modules/ExerciseManager";
 
 
 export const ExerciseList = ({ catId, handleAddToSession }) => {
     const [exercises, setExercises] = useState([])
-    const history = useHistory() 
     const userId = sessionStorage.getItem("app_user_id")
 
     const getCatExercises = (cat, user) => {

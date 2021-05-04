@@ -67,6 +67,27 @@
       "description": "testtest",
       "categoryId": 3,
       "id": 11
+    },
+    {
+      "userId": 1,
+      "name": "Jazz Standard",
+      "description": "Work through a standard, single line, with appropriate tone and articulation. Move through all 12 keys.",
+      "categoryId": 1,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "name": "Comping Through Standards",
+      "description": "Comp through a standard.",
+      "categoryId": 2,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "name": "South Indian Hand Claps",
+      "description": "Clap your hands a lot",
+      "categoryId": 3,
+      "id": 14
     }
   ],
   "sessions": [
@@ -82,11 +103,6 @@
     },
     {
       "userId": 1,
-      "name": "Heck Yeah",
-      "id": 14
-    },
-    {
-      "userId": 1,
       "name": "Here We are",
       "id": 15
     },
@@ -94,6 +110,31 @@
       "userId": 2,
       "name": "Bryan's Session",
       "id": 17
+    },
+    {
+      "userId": 1,
+      "name": "Melodic Work",
+      "id": 18
+    },
+    {
+      "userId": 1,
+      "name": "Tuesday morning",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "name": "test",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "name": "Test",
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "name": "Another ",
+      "id": 23
     }
   ],
   "session_exercises": [
@@ -111,21 +152,6 @@
       "sessionId": 9,
       "exerciseId": 9,
       "id": 27
-    },
-    {
-      "sessionId": 14,
-      "exerciseId": 3,
-      "id": 29
-    },
-    {
-      "sessionId": 14,
-      "exerciseId": 5,
-      "id": 30
-    },
-    {
-      "sessionId": 14,
-      "exerciseId": 9,
-      "id": 31
     },
     {
       "sessionId": 15,
@@ -146,6 +172,86 @@
       "sessionId": 17,
       "exerciseId": 11,
       "id": 39
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 12,
+      "id": 40
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 4,
+      "id": 41
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 6,
+      "id": 42
+    },
+    {
+      "sessionId": 18,
+      "exerciseId": 5,
+      "id": 43
+    },
+    {
+      "sessionId": 20,
+      "exerciseId": 14,
+      "id": 47
+    },
+    {
+      "sessionId": 20,
+      "exerciseId": 3,
+      "id": 48
+    },
+    {
+      "sessionId": 20,
+      "exerciseId": 13,
+      "id": 49
+    },
+    {
+      "sessionId": 21,
+      "exerciseId": 3,
+      "id": 50
+    },
+    {
+      "sessionId": 21,
+      "exerciseId": 4,
+      "id": 51
+    },
+    {
+      "sessionId": 22,
+      "exerciseId": 12,
+      "id": 52
+    },
+    {
+      "sessionId": 22,
+      "exerciseId": 5,
+      "id": 53
+    },
+    {
+      "sessionId": 22,
+      "exerciseId": 14,
+      "id": 54
+    },
+    {
+      "sessionId": 23,
+      "exerciseId": 12,
+      "id": 55
+    },
+    {
+      "sessionId": 23,
+      "exerciseId": 3,
+      "id": 56
+    },
+    {
+      "sessionId": 23,
+      "exerciseId": 4,
+      "id": 57
+    },
+    {
+      "sessionId": 23,
+      "exerciseId": 5,
+      "id": 58
     }
   ],
   "categories": [
@@ -166,14 +272,8 @@
     {
       "id": 3,
       "completion_date": "Mon May 03 2021",
-      "progressNote": "Big Time Edit!",
+      "progressNote": "Small Time Edit!",
       "exerciseId": 5
-    },
-    {
-      "id": 4,
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "Making an edit",
-      "exerciseId": 9
     },
     {
       "completion_date": "Mon May 03 2021",
@@ -186,12 +286,6 @@
       "completion_date": "Mon May 03 2021",
       "progressNote": "Helllo",
       "exerciseId": 5
-    },
-    {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "test",
-      "exerciseId": 9,
-      "id": 10
     },
     {
       "completion_date": "Mon May 03 2021",
@@ -212,10 +306,58 @@
       "id": 15
     },
     {
-      "completion_date": "Mon May 03 2021",
-      "progressNote": "sweet",
-      "exerciseId": 9,
-      "id": 16
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "It worked",
+      "exerciseId": 3,
+      "id": 17
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Still working ",
+      "exerciseId": 4,
+      "id": 18
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Cool",
+      "exerciseId": 6,
+      "id": 19
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Cool cool ",
+      "exerciseId": 12,
+      "id": 20
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Still wokrin g",
+      "exerciseId": 4,
+      "id": 21
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "new note",
+      "exerciseId": 6,
+      "id": 22
+    },
+    {
+      "id": 23,
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "90 Bpm struggle",
+      "exerciseId": 14
+    },
+    {
+      "completion_date": "Tue May 05 2021",
+      "progressNote": "Here's yet another note",
+      "exerciseId": 3,
+      "id": 24
+    },
+    {
+      "completion_date": "Tue May 04 2021",
+      "progressNote": "Newest Note today!",
+      "exerciseId": 12,
+      "id": 25
     }
   ]
 }
