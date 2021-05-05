@@ -68,10 +68,10 @@
     },
     {
       "userId": 1,
+      "id": 8,
       "name": "Chord Melody",
       "description": "Harmonize a melody utilizing the standard chord changes or a reharm.",
-      "categoryId": 2,
-      "id": 8
+      "categoryId": 2
     },
     {
       "userId": 1,
@@ -79,6 +79,13 @@
       "description": "Clap your hands while saying the syllables. ",
       "categoryId": 3,
       "id": 9
+    },
+    {
+      "userId": 1,
+      "name": "Swing eighth notes",
+      "description": "Swing!",
+      "categoryId": 3,
+      "id": 10
     }
   ],
   "sessions": [
@@ -109,18 +116,13 @@
     },
     {
       "userId": 1,
-      "name": "This one is for Bryan",
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "name": "Testing",
-      "id": 8
-    },
-    {
-      "userId": 1,
       "name": "Hip ",
       "id": 9
+    },
+    {
+      "userId": 1,
+      "name": "Cinco! ",
+      "id": 10
     }
   ],
   "session_exercises": [
@@ -190,31 +192,6 @@
       "id": 18
     },
     {
-      "sessionId": 7,
-      "exerciseId": 7,
-      "id": 19
-    },
-    {
-      "sessionId": 7,
-      "exerciseId": 5,
-      "id": 20
-    },
-    {
-      "sessionId": 7,
-      "exerciseId": 6,
-      "id": 21
-    },
-    {
-      "sessionId": 8,
-      "exerciseId": 9,
-      "id": 22
-    },
-    {
-      "sessionId": 8,
-      "exerciseId": 6,
-      "id": 24
-    },
-    {
       "sessionId": 9,
       "exerciseId": 4,
       "id": 25
@@ -223,6 +200,16 @@
       "sessionId": 9,
       "exerciseId": 5,
       "id": 26
+    },
+    {
+      "sessionId": 10,
+      "exerciseId": 10,
+      "id": 27
+    },
+    {
+      "sessionId": 10,
+      "exerciseId": 7,
+      "id": 28
     }
   ],
   "categories": [
@@ -335,6 +322,12 @@
       "progressNote": "D major. Struggled. ",
       "exerciseId": 5,
       "id": 17
+    },
+    {
+      "completion_date": "Wed May 05 2021",
+      "progressNote": "All the Things you Are in Ab",
+      "exerciseId": 7,
+      "id": 19
     }
   ]
 }

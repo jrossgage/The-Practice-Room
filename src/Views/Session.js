@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import { useHistory } from "react-router-dom";
 
 //components
 import { SessionCard } from "../components/sessions/SessionCard";
@@ -8,7 +7,6 @@ import { getAllSessions, deleteSession } from "../components/modules/SessionMana
 export const Session = ({ handleBeginButton }) => {
 
     const [sessions, setSessions] = useState([])
-    const history = useHistory()
     const currentUserId = sessionStorage.getItem("app_user_id")
 
     const getSessions = (userId) => {

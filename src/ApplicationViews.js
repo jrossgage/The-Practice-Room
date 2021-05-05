@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { Route, Router, useHistory } from "react-router-dom"
+import { Route, useHistory } from "react-router-dom"
 
 //Components 
+import { NavBar } from "./components/nav/NavBar"
 import { LandingPage } from "./views/LandingPage";
 import { ExerciseForm } from "./components/exercises/ExerciseForm";
 import { ExerciseEditForm } from "./components/exercises/ExerciseEditForm";
@@ -46,11 +47,13 @@ export const ApplicationViews = () => {
       </Route>
 
       <Route path="/room">
+      <NavBar />
         <PracticeRoom
         handleBeginButton={handleBeginButton} />
       </Route>
 
       <Route path="/sessions">
+      <NavBar />
         <Session
           handleBeginButton={handleBeginButton} />
       </Route>

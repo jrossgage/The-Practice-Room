@@ -22,7 +22,7 @@ export const ExerciseList = ({ catId, handleAddToSession }) => {
 
     useEffect(() => {
         getCatExercises(catId, userId);
-    }, []);
+    }, [userId]);
 
     return (
         <>

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react"
-import { useHistory } from "react-router"
+import React, { useState } from "react"
 import "./PracticeNoteCard.css"
 //components
 import {addNote} from "../modules/NoteManager"
@@ -16,7 +15,6 @@ export const PracticeNoteCard = ({ exercise, index, updateCompletedExercise }) =
         progressNote: "",
         exerciseId: exercise.id
     })
-    const history = useHistory()
 
     //Handles the input for the text field. Will update the "progressNote" of the note state when anything is inputted into the field
     const handleControlledInputChange = (event) => {

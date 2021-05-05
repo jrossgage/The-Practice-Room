@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import { useHistory } from "react-router"
 import "./SessionContainer.css"
 
 //components 
@@ -17,7 +16,6 @@ export const SessionContainer = ({ exercises, clearSessionContainer, handleBegin
     })
 
     const [emptyContainer, setEmptyContainer] = useState(true)
-    const history = useHistory()
 
     const handleControlledInputChange = (event) => {
 
@@ -32,13 +30,12 @@ export const SessionContainer = ({ exercises, clearSessionContainer, handleBegin
 
     const handleClickSessionSave = (event) => {
         event.preventDefault()
-        // setIsLoading(true)
 
         const name = session.name
 
         if (name === "Name Your Session" || name === "") {
             return window.alert("Input a Session Name")
-        } 
+        }
         if (event.target.id === "begin") {
             addSession(session)
                 .then(resSession => {
@@ -46,14 +43,17 @@ export const SessionContainer = ({ exercises, clearSessionContainer, handleBegin
                     let exerciseIdArray = []
                     exercises.map(exercise => exerciseIdArray.push(exercise.id))
 
+                    const promiseArray = []
                     for(const id of exerciseIdArray) {
                         let sessionExercise = {
                             sessionId: sessId,
                             exerciseId: id
                         }
-                        addSessionExercise(sessionExercise)
-                        .then(() => handleBeginButton(sessId))
+                        promiseArray.push(addSessionExercise(sessionExercise))
                     }
+                    Promise.all(promiseArray)
+                    .then((data) => handleBeginButton(sessId)
+                    )
                 })
             }
             if (event.target.id === "saveLater") {
