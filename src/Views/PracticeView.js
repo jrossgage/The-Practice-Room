@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react"
 //components 
 import { getExercisesBySessionId } from "../components/modules/SessionManager"
 import { PracticeNoteCard } from "../components/notes/PracticeNoteCard"
-import { addNote } from "../components/modules/NoteManager"
 import { useHistory } from "react-router"
 //I need the state to be the sessionId and a state for the exercises (from the session_exercise fetch call)
 //the sessionId state will be used to make the exercise fetch call, setting the state for the "exercises". 
@@ -25,7 +24,9 @@ export const PracticeView = ({ sessionId }) => {
             .then(response => {
                 response.map(res => {
                     res.exercise.isComplete = false
-                    exerciseObjArray.push(res.exercise)
+                   return (
+                       exerciseObjArray.push(res.exercise)
+                       )
                 })
                 setExercises(exerciseObjArray)
             })

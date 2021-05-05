@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useHistory, useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 //components
 import { getNoteById, updateNote } from "../modules/NoteManager"
 import { getExerciseById } from "../modules/ExerciseManager"

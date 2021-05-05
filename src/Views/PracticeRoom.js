@@ -32,7 +32,7 @@ export const PracticeRoom = ({ handleBeginButton }) => {
             .then(response => {
                 setCategories(response)
             })
-        })
+        }, [])
 
     return (
         <>

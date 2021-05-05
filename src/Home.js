@@ -1,7 +1,6 @@
 import React from "react"
 import { Route, Redirect } from "react-router-dom"
 import { ApplicationViews } from "./ApplicationViews"
-import { NavBar } from "./components/nav/NavBar"
 import { Login } from "./components/auth/Login"
 import { Register } from "./components/auth/Register"
 import { userStorageKey } from "./components/auth/authSettings"
@@ -14,9 +13,10 @@ export const Home = () => (
         if (sessionStorage.getItem(userStorageKey)) {
           return (
             <>
-              <NavBar />
               <ApplicationViews />
-              <footer className="footer">&copy; The Practice Room 2021</footer>
+              {/* <footer className="footer-background-color $is-primary" >
+               &copy; <strong>The Practice Room</strong> 2021
+              </footer> */}
             </>
           )
         } else {

@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const ProgressNoteCard = ({ note, handleDeleteNote }) => {
 
-    const history = useHistory()
+   
 
     return (
         <div className="card-content">

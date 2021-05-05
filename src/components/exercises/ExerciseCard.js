@@ -12,6 +12,7 @@ import {getNotesByExercise} from "../modules/NoteManager"
 // Then, with the most recent note being the first element of the array [0], I can select the date (notes[0].completion_date) and interpolate onto the card.
 
 //What I need: a note array state, sorted by date, being passed into this component
+
 export const ExerciseCard = ({ exercise, handleDeleteExercise, handleAddToSession }) => {
 
     const [note, setNote] = useState({}) 
@@ -23,7 +24,6 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise, handleAddToSessio
             setNote(response[response.length-1])
     })
 }
-
 
     useEffect(() => {
        getRelatedNote()
@@ -56,8 +56,6 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise, handleAddToSessio
 }
 
 export const SessionExerciseCard = ({ exercise }) => {
-
-    const history = useHistory()
 
     return (
         <div className="card">
