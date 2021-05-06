@@ -1,28 +1,34 @@
 import React from "react"
 import { Link } from "react-router-dom"
-// import "bootstrap/dist/css/bootstrap.min.css"
+import logo from "../../images/The-Practice-Room-Logo.png"
+
 
 
 export const NavBar = (props) => {
   return (
-    <div className="block">
-      <nav className="nav">
-        <div className="nav-left">
-          <a className="nav-item">
-            <Link to="/room">Your Practice Room</Link>
-          </a>
+    
+    <nav className="navbar is-primary" role="navigation" aria-label="main navigation">
+
+      <div className="navbar-brand">
+        <div className="navbar-item">
+         <img src={logo} alt="Logo"/>
         </div>
-        <div className="nav-center">
-          <a className="nav-item">
-            <Link to="/sessions">Your Sessions</Link>
-          </a>
+      </div>
+
+      <div className="navbar-menu">
+
+        <div className="navbar-start">
+            <Link to="/sessions" className="navbar-item is-size-5 is-italic">Sessions</Link>
+
+            <Link to="/room" className="navbar-item is-size-5 is-italic">Practice Room</Link>
         </div>
-        <div className="nav-right">
-          <a className="nav-item">
-            <Link to="/exercise/create">New Exercise</Link>
-          </a>
-        </div>
-      </nav>
-    </div>
+
+        <div className="navbar-end">
+            <Link to="/exercise/create" className="navbar-item is-size-5 is-italic">New Exercise</Link>
+        </div> 
+
+      </div>
+
+    </nav>
   )
 }

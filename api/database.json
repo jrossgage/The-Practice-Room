@@ -86,6 +86,13 @@
       "description": "Swing!",
       "categoryId": 3,
       "id": 10
+    },
+    {
+      "userId": 1,
+      "name": "Testing ",
+      "description": "HEre is test for bulma",
+      "categoryId": 1,
+      "id": 11
     }
   ],
   "sessions": [

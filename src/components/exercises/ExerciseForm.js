@@ -47,7 +47,7 @@ export const ExerciseForm = () => {
 
     const handleClickGoBack = (event) => {
         history.push("/")
-        }
+    }
 
 
     useEffect(() => {
@@ -59,45 +59,52 @@ export const ExerciseForm = () => {
 
     return (
         <>
-            <div>
-                <h2 className="exerciseForm__title">What do you want to work on?</h2>
-                <button className="goBack-bttn"
-                    onClick={handleClickGoBack}>
-                  Landing Page
-              </button>
+            <div className="hero is-small is-primary">
+                <h2 className="hero-body">
+                    <p className="title">What do you want to work on?</p>
+                    </h2>
             </div>
-            <form className="exerciseForm">
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="category">Category</label>
-                        <select value={exercise.categoryId} name="categoryId" id="categoryId" onChange={handleControlledInputChange} className="form-control" >
-                            <option value="0">Category</option>
-                            {categories.map(c => (
-                                <option key={c.id} value={c.id}>
-                                    {c.name}
-                                </option>
-                            ))}
-                        </select>
+
+            
+                <fieldset className="field">
+                    <div className="dropdown">
+                        <div className="dropdown-trigger ">
+                            <select value={exercise.categoryId} name="categoryId" id="categoryId" onChange={handleControlledInputChange} className="dropdown-item" >
+                                <option value="0">Category</option>
+                                {categories.map(c => (
+                                    <option key={c.id} value={c.id}>
+                                        {c.name}
+                                    </option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+                <fieldset className="field">
+                    <label className="label is-medium">Exercise Name:</label>
+                    <div className="control">
+                        <input type="text" id="name" onChange={handleControlledInputChange} className="input" placeholder="exercise name" value={exercise.name} />
                     </div>
                 </fieldset>
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="name">Exercise Name:</label>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control input is-primary" placeholder="exercise name" value={exercise.name} />
+                <fieldset className="field">
+                    <label className="label is-medium">Description:</label>
+                    <div className="control">
+                        <textarea type="textarea" id="description" onChange={handleControlledInputChange} className="textarea" placeholder="exercise description" value={exercise.description} />
                     </div>
-                </fieldset>
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="description">Description:</label>
-                        <textarea type="textarea" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control textarea" placeholder="exercise description" value={exercise.description} />
-                    </div>
+
                 </fieldset>
 
-                <button disabled={isLoading} className="saveExercise-bttn"
-                    onClick={handleClickSaveExercise}>
-                    Save
+                    <button disabled={isLoading} className="button is-primary"
+                        onClick={handleClickSaveExercise}>
+                        Save
+                     </button>
+
+                     <button className="button is-light"
+                    onClick={handleClickGoBack}>
+                   Cancel
               </button>
-            </form>
+          
         </>
     )
 }
