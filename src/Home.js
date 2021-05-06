@@ -14,9 +14,11 @@ export const Home = () => (
           return (
             <>
               <ApplicationViews />
-              {/* <footer className="footer-background-color $is-primary" >
+              <footer className="footer $footer-background-color: $black">
+                <div className="content has-text-centered">
                &copy; <strong>The Practice Room</strong> 2021
-              </footer> */}
+               </div>
+              </footer>
             </>
           )
         } else {

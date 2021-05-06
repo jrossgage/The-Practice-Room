@@ -7,8 +7,10 @@ import { Link } from "react-router-dom"
 export const LandingPage = () => {
     return (
         <>
-            <div className="block">
-                <h1 className="subtitle">How Would You Like to Begin Today?</h1>
+            <div className="hero is-primary">
+                <h1 className="hero-body">
+                    <p className="title">How Would You Like to Begin Today?</p>
+                    </h1>
             </div>
             <div className="block">
                 <div className="tile">

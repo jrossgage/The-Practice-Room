@@ -22,42 +22,47 @@ export const PracticeRoom = ({ handleBeginButton }) => {
     }
 
     const clearSessionContainer = () => {
-       
-            const clearExercises = []
-            setExercises(clearExercises)
-        }
-    
-        useEffect(() => {
-            getAllCategories()
+
+        const clearExercises = []
+        setExercises(clearExercises)
+    }
+
+    useEffect(() => {
+        getAllCategories()
             .then(response => {
                 setCategories(response)
             })
-        }, [])
+    }, [])
 
     return (
         <>
-            <div className="headTitle">
-                <h1>Your Practice Room</h1>
-            </div>
+            <body>
+                <section className="hero is-small ">
+                    <div className="hero-body">
+                        <p className="title">Your Practice Room</p>
+                    </div>
+                </section>
 
-            <section className="exercise_categories_container">
-                {categories.map(category => {
-                   return (
-                    <div key={category.id} className={category.name}>
-                    <h2>{category.name}</h2>
-                    <ExerciseList
-                        catId={category.id}
-                        handleAddToSession={handleAddToSession} />
-                </div>
-                )
-                })}
+                <section className="exercise_categories_container">
+                    {categories.map(category => {
+                        return (
+                            <div key={category.id} className={category.name}>
+                                <h2 className="subtitle is-2">{category.name}</h2>
+                                <ExerciseList
+                                    catId={category.id}
+                                    handleAddToSession={handleAddToSession} />
+                            </div>
+                        )
+                    })}
 
-            </section>
+                </section>
 
-            <SessionContainer
-                exercises={exercises}
-                clearSessionContainer={clearSessionContainer}
-                handleBeginButton={handleBeginButton} />
+                <SessionContainer
+                    exercises={exercises}
+                    clearSessionContainer={clearSessionContainer}
+                    handleBeginButton={handleBeginButton} />
+
+            </body>
         </>
     )
 }

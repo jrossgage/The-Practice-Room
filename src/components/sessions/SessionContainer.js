@@ -95,9 +95,9 @@ export const SessionContainer = ({ exercises, clearSessionContainer, handleBegin
         
             return (
                 <>
-                    <div className="sessionContainerTitle">
-                        <h1>Create a Session</h1>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="Name Your Session" value={session.name} />
+                    <div className="field">
+                        <h1 className="subtitle is-3">Create a Session</h1>
+                        <input type="text" id="name" onChange={handleControlledInputChange} className="text" placeholder="Name Your Session" value={session.name} />
                     </div>
                     <div className="container-cards">
                         {exercises.map(exercise =>
@@ -107,13 +107,13 @@ export const SessionContainer = ({ exercises, clearSessionContainer, handleBegin
                             />)}
                     </div>
 
-                    <button disabled={emptyContainer} className="beginPractice=bttn" id="begin" 
+                    <button disabled={emptyContainer} className="button is-primary" id="begin" 
                     onClick={handleClickSessionSave}>Begin Practicing!</button>
 
-                    <button disabled={emptyContainer} className="saveSession-bttn" id="saveLater"
+                    <button disabled={emptyContainer} className="button is-light" id="saveLater"
                         onClick={handleClickSessionSave}>Save For Later</button>
 
-                    <button className="clearSession-bttn" id="clear" 
+                    <button className="button is-light" id="clear" 
                     onClick={() => clearSessionContainer()}>Clear Session</button>
 
                 </>

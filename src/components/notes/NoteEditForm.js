@@ -50,36 +50,37 @@ export const NoteEditForm = () => {
         getNoteById(noteId)
             .then(note => {
                 setNote(note)
-                    getExerciseById(note.exerciseId)
+                getExerciseById(note.exerciseId)
                     .then(exercise => {
                         setExercise(exercise);
                         setIsLoading(false)
-                })
+                    })
             })
     }, [])
-        
 
-        return (
-            <>
-                <section className="heading">
-                    <h2 className="heading_title">What would you like to change?</h2>
-                </section>
-                <div className="card">
-                    <div className="card-content">
-                        <h1>
-                            <span className="card-exerciseName">{exercise?.name}</span></h1>
-                        <p className="noteDate">Date: {note?.completion_date}</p>
-                        <textarea type="textfield" id="progressNote" onChange={handleControlledInputChange} required autoFocus
-                            className="form-control" placeholder="progress note" value={note?.progressNote} />
 
-                        <div className="noteEdit-bttn">
-                            <button disabled={isLoading} type="saveNote-bttn" onClick={updateExistingNote}>Save</button>
+    return (
+        <>
+            <div className="hero is-small is-primary">
+                <h2 className="hero-body">
+                    <span className="title">{exercise?.name}</span>
+                </h2>
+            </div>
 
-                            <button type="button" onClick={() => history.push(`/exercise/${exercise.id}`)}>Return</button>
-                        </div>
-
-                    </div>
+            <div className="field">
+                    <p className="subtitle is-3">{note?.completion_date}</p>
+                <div className="control">
+                    <textarea type="textfield" id="progressNote" onChange={handleControlledInputChange}
+                        className="textarea" placeholder="progress note" value={note?.progressNote} />
                 </div>
-            </>
-        );
-    }
+
+                    <div className="control">
+                        <button className="button is-primary" disabled={isLoading} type="saveNote-bttn" onClick={updateExistingNote}>Save</button>
+
+                        <button className="button is-light" type="button" onClick={() => history.push(`/exercise/${exercise.id}`)}>Return</button>
+                    </div>
+
+            </div>
+        </>
+    );
+}

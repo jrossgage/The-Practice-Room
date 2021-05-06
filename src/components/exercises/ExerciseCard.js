@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 
 //components
-import {getNotesByExercise} from "../modules/NoteManager"
+import { getNotesByExercise } from "../modules/NoteManager"
 
 //What I want to do: Display the date of the last time a note was logged for a practice exercise.
 //What has to happen: I need the most recent note created for an exercise.
@@ -15,54 +15,45 @@ import {getNotesByExercise} from "../modules/NoteManager"
 
 export const ExerciseCard = ({ exercise, handleDeleteExercise, handleAddToSession }) => {
 
-    const [note, setNote] = useState({}) 
+    const [note, setNote] = useState({})
     const history = useHistory()
 
     const getRelatedNote = () => {
         getNotesByExercise(exercise.id)
-        .then(response => {
-            setNote(response[response.length-1])
-    })
-}
+            .then(response => {
+                setNote(response[response.length - 1])
+            })
+    }
 
     useEffect(() => {
-       getRelatedNote()
+        getRelatedNote()
     }, [exercise]);
 
     return (
         <div className="card">
             <div className="card-content">
-                <h3> <span className="card-exerciseName">
-                    {exercise.name} </span></h3>
-                <p>Last Practiced: { note ? note?.completion_date : "Not Yet Practiced"}</p>
+                 <span className="card-header-title">
+                    {exercise.name}</span>
+                <p className="content">Practiced on {note ? note?.completion_date : "Not Yet Practiced"}</p>
 
-                <button type="button" onClick={() => handleAddToSession(exercise.id)}>Add to Session</button>
-                
-                <Link to={`/exercise/${exercise.id}`}>
-                    <button>View</button>
-                </Link>
-
-                <button type="button" onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
-
-
-                <button type="button"
-                    onClick={() => history.push(`/exercise/${exercise.id}/edit`)}>
-                    Edit
-                </button>
-
+                <div className="card-footer">
+                    <a className="button is-small is-primary" type="button" onClick={() => handleAddToSession(exercise.id)}>Add to Session</a>
+                    <Link className="button is-small is-light" to={`/exercise/${exercise.id}`}>View</Link>
+                    <a className="button is-small is-light" type="button" onClick={() => history.push(`/exercise/${exercise.id}/edit`)}>Edit</a>
+                    <a className="button is-small is-light" type="button" onClick={() => handleDeleteExercise(exercise.id)}>Delete</a>
+                </div>
             </div>
         </div>
-    );      
+    );
 }
 
 export const SessionExerciseCard = ({ exercise }) => {
 
     return (
         <div className="card">
-         
             <div className="card-content">
                 <h3 className="card-exerciseName">{exercise.name}</h3>
             </div>
         </div>
     );
-            }
+}

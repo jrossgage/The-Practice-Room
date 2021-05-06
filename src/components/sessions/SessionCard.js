@@ -7,11 +7,10 @@ export const SessionCard = ({ session, handleDeleteSession, handleBeginButton })
     return (
         <div className="card">
             <div className="card-content">
-                <h3>
-                    <span className="card-sessionName">{session.name}</span></h3>
+                    <span className="card-header-title">{session.name}</span>
 
-                <button type="button" onClick={() => handleBeginButton(session.id)}>Begin!</button>
-                <button type="button" onClick={() => handleDeleteSession(session.id)}>Delete</button>
+                <button className="button is-primary is-small" type="button" onClick={() => handleBeginButton(session.id)}>Begin!</button>
+                <button className="button is-light is-small" type="button" onClick={() => handleDeleteSession(session.id)}>Delete</button>
 
             </div>
         </div>

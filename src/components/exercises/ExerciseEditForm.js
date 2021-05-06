@@ -6,8 +6,8 @@ import { getAllCategories } from "../modules/CategoryManager"
 
 export const ExerciseEditForm = () => {
 
-    const currentUser= parseInt(sessionStorage.getItem("app_user_id"))
-    
+    const currentUser = parseInt(sessionStorage.getItem("app_user_id"))
+
     const [exercise, setExercise] = useState({
         userId: currentUser,
         name: "",
@@ -34,46 +34,48 @@ export const ExerciseEditForm = () => {
     const updateExistingExercise = evt => {
         evt.preventDefault()
         setIsLoading(true);
-    
+
         // This is an edit, so we need the id
         const editedExercise = {
             userId: currentUser,
-          id: exerciseId,
-          name: exercise.name,
-          description: exercise.description,
-          categoryId: exercise.categoryId
+            id: exerciseId,
+            name: exercise.name,
+            description: exercise.description,
+            categoryId: exercise.categoryId
         };
 
         updateExercise(editedExercise)
-        .then(() => history.push("/room")
-        )
+            .then(() => history.push("/room")
+            )
     }
 
     useEffect(() => {
         getExerciseById(exerciseId)
-          .then(exercise => {
-            setExercise(exercise);
-            setIsLoading(false);
-          });
-      }, []);
+            .then(exercise => {
+                setExercise(exercise);
+                setIsLoading(false);
+            });
+    }, []);
 
-      useEffect(() => {
+    useEffect(() => {
         getAllCategories()
-          .then(response => {
-            setCategories(response)
-          })
-      }, [])
+            .then(response => {
+                setCategories(response)
+            })
+    }, [])
 
-      return (
-          <>
-           <div>
-                <h2 className="exerciseForm__title">What do you want to Change?</h2>
+    return (
+        <>
+            <div className="hero is-small is-primary">
+                <h2 className="hero-body">
+                    <p className="title">What do you want to Change?</p>
+                </h2>
             </div>
-            <form className="exerciseForm">
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="category">Category</label>
-                        <select value={exercise.categoryId} name="categoryId" id="categoryId" onChange={handleControlledInputChange} className="form-control" >
+        
+                <fieldset className="field">
+                    <div className="dropdown">
+                        <div className="dropdown-trigger">
+                        <select value={exercise.categoryId} name="categoryId" id="categoryId" onChange={handleControlledInputChange} className="dropdown-item" >
                             <option value="0">Category</option>
                             {categories.map(c => (
                                 <option key={c.id} value={c.id}>
@@ -81,26 +83,27 @@ export const ExerciseEditForm = () => {
                                 </option>
                             ))}
                         </select>
+                        </div>
                     </div>
                 </fieldset>
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="name">Exercise Name:</label>
-                        <input type="text" id="name" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="exercise name" value={exercise.name} />
+                <fieldset className="field">
+                        <label className="label is-medium">Exercise Name</label>
+                    <div className="control">
+                        <input type="text" id="name" onChange={handleControlledInputChange} className="input" placeholder="exercise name" value={exercise.name} />
                     </div>
                 </fieldset>
-                <fieldset>
-                    <div className="form-group">
-                        <label htmlFor="description">Description:</label>
-                        <textarea type="textfield" id="description" onChange={handleControlledInputChange} required autoFocus className="form-control" placeholder="exercise description" value={exercise.description} />
+                <fieldset className="field">
+                        <label className="label is-medium">Description:</label>
+                    <div className="control">
+                        <textarea type="textfield" id="description" onChange={handleControlledInputChange} className="textarea" placeholder="exercise description" value={exercise.description} />
                     </div>
                 </fieldset>
 
-                <button disabled={isLoading} className="saveExercise-bttn"
+                <button disabled={isLoading} className="button is-primary"
                     onClick={updateExistingExercise}>
                     Save
               </button>
-            </form>
-          </>
-      )
+         
+        </>
+    )
 }
