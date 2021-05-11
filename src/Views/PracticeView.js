@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react"
+import { useHistory } from "react-router"
 
 //components 
 import { getExercisesBySessionId } from "../components/modules/SessionManager"
 import { PracticeNoteCard } from "../components/notes/PracticeNoteCard"
-import { useHistory } from "react-router"
+import { Metronome } from "../components/met/Metronome"
 //I need the state to be the sessionId and a state for the exercises (from the session_exercise fetch call)
 //the sessionId state will be used to make the exercise fetch call, setting the state for the "exercises". 
 //The exercise state will be passed to the PracticeNoteCard to be displayed within this list view.
@@ -75,6 +76,8 @@ export const PracticeView = ({ sessionId }) => {
                         exercise={exercise}
                     />)}
             </div>
+
+            <Metronome />
         </>
     )
 }
