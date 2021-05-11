@@ -39,6 +39,7 @@ export const ExerciseForm = () => {
 
         if (name === "" || description === "" || categoryId === 0) {
             window.alert("Please input more information")
+            setIsLoading(false)
         } else {
             addExercise(exercise)
                 .then(() => history.push("/room"))

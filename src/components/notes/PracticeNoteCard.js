@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import "./PracticeNoteCard.css"
 //components
-import {addNote} from "../modules/NoteManager"
+import { addNote } from "../modules/NoteManager"
 
 export const PracticeNoteCard = ({ exercise, index, updateCompletedExercise }) => {
 
@@ -42,32 +42,35 @@ export const PracticeNoteCard = ({ exercise, index, updateCompletedExercise }) =
                 exerciseId: exercise.id
             }
             addNote(newNote)
-            .then(data => {
-                setNote(data)
-                event.target.disabled = true
-                updateCompletedExercise(index)
-            })
+                .then(data => {
+                    setNote(data)
+                    event.target.disabled = true
+                    updateCompletedExercise(index)
+                })
         }
 
     }
 
     return (
         <div className="card">
-            <div className="card-content">
-                <h3>
-                    <span className="card-exerciseName">
-                        {exercise.name}
-                    </span></h3>
-                <div className="button-inputs">
-                    <input type="text" id="progressNote" onChange={handleControlledInputChange} required autoFocus
-                        className="form-control" placeholder="Progress Notes" value={note.progressNote} />
-                    <p>
-                        <input type="checkbox" id="completed" onChange={handleCheckboxClick} checked={note.completion_date !== 0} />
-                        Completed
-                    </p>
-                </div>
 
+            <div className="card-header">
+                <h3 className="card-header-title">
+                    {exercise.name}
+                </h3>
             </div>
+
+            <div className="card-content">   
+                    <textarea type="textfield" id="progressNote" onChange={handleControlledInputChange}
+                        className="textarea" placeholder="Progress Notes" value={note.progressNote} />
+            </div>
+                   <footer className="card-footer is-right">
+                       <label className="checkbox ">
+                        <input type="checkbox" id="completed" onChange={handleCheckboxClick} checked={note.completion_date !== 0} /> Save progress
+                       </label>
+                   </footer>
+                   
+
         </div>
     );
 }

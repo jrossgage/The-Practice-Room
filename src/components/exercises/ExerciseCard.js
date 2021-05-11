@@ -34,7 +34,7 @@ export const ExerciseCard = ({ exercise, handleDeleteExercise, handleAddToSessio
             <div className="card-content">
                  <span className="card-header-title">
                     {exercise.name}</span>
-                <p className="content">Practiced on {note ? note?.completion_date : "Not Yet Practiced"}</p>
+                <p className="content">Practiced: {note ? note?.completion_date : "Not Yet"}</p>
 
                 <div className="card-footer">
                     <a className="button is-small is-primary" type="button" onClick={() => handleAddToSession(exercise.id)}>Add to Session</a>
